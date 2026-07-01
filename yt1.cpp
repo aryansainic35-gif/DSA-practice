@@ -159,7 +159,7 @@
 
 // }
 
-//# include <iostream>
+// # include <iostream>
 // using namespace std;
 
 // bool isPrime(int n) {
@@ -182,7 +182,7 @@
 //     if(isPrime(num)){
 //         cout << num << " is a prime number.";
 //     } else{
-//         cout << num << " is not a primr number.";
+//         cout << num << " is not a prime number.";
 //     }
 
 //     return 0;

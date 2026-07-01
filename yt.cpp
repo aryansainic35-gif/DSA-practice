@@ -13,7 +13,6 @@
 // using namespace std;
 
 // int main(){
-//     int age = 25;
 //     char grade = 'A';
 //                               // character type
 //     cout << grade << endl;    // it take 1 byte
@@ -41,7 +40,6 @@
 //     int value = grade;       // Type casting : conversion(Implicit)
 //     cout << value << endl;
 //     return 0;
-
 // }
 
 
@@ -68,18 +66,18 @@
 // }
 
 
-//# include <iostream>
+// # include <iostream>
 // using namespace std;
 
 // int main(){
-//     //int a = 10;
-//     // //double b = 3;
-
-//     //    cout << "Sum = " << (a + b) << endl;
-//     //    cout << "difference = " << (a - b) << endl;
-//     //    cout << "product = " << (a * b) << endl;
-//           cout << (5 / (double)2) << endl;
-//     //    cout << "modulo = " << (a % b) << endl;
+//     int a = 10;
+//     int b = 3;
+    
+//     cout << "Sum = " << (a + b) << endl;
+//     cout << "difference = " << (a - b) << endl;
+//     cout << "product = " << (a * b) << endl;
+//     cout << (5 / (double)2) << endl;
+//     cout << "modulo = " << (a % b) << endl;
 //     return 0;
 // }
 
@@ -94,7 +92,7 @@
 // //     cout << (3!=3) << endl;
 //        cout <<( (3<1) || (3>5) )<< endl;
 //     return 0;
-//}
+// }
 
 
 // # include <iostream>
@@ -125,7 +123,7 @@
 //     cout << "Enter b : ";
 //     cin >> b;
 
-//     cout << "Sum : " <<(a+b) << endl;
+//     cout << "Sum : " << (a+b) << endl;
 //     cout << "diff : " << (a-b) << endl;
 //     cout << "product : " << (a*b) << endl;
 //     cout << "division : " << (a/b) << endl;
@@ -145,7 +143,7 @@
 //     cin >> age;
 //     if(age >= 18){
 //         cout << "you can vote" << endl;
-//     }else{
+//     } else{
 //         cout << "you cannot vote" << endl;
 //     }
 
@@ -169,11 +167,12 @@
 // }
 
 
-//# include <iostream>
+// # include <iostream>
 // using namespace std;
 
 // int main(){
 //     int n;
+    
 //     cout << "Enter the number n : ";
 //     cin >> n;
 //     if(n % 2 == 0){
