@@ -19,9 +19,26 @@
 // }
 
 // # include <iostream>
+
 // using namespace std;
 
 // int main(){      // bitwise reight shift right shift (>>)
 //     cout << (10 >> 1) << endl;
+//     return 0;
+// }
+
+// # include <iostream>
+// using namespace std;
+
+// int x = 10;
+
+// int fun() {
+    // cout << x << endl;    // global scope
+// }
+
+// int main(){
+//     fun();
+//     cout << x << endl;
+
 //     return 0;
 // }
