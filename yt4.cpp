@@ -70,26 +70,76 @@
 //     return 0;
 // }
 
-#include <iostream>
-using namespace std;
 
-void changeArr(int arr[], int size) {
-    cout << "in function\n";
-    for(int i=0; i<size; i++) {
-        arr[i] = 2*arr[i];
-    }
-}
+// #include <iostream>
+// using namespace std;
 
-int main(){
-    int arr[] = {1, 2, 3};
+// void changeArr(int arr[], int size) {
+//     cout << "in function\n";
+//     for(int i=0; i<size; i++) {
+//         arr[i] = 2*arr[i];
+//     }
+// }
 
-    changeArr(arr, 3);
+// int main(){
+//     int arr[] = {1, 2, 3};
 
-    cout << "in main\n";
-    for(int i=0; i<3; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+//     changeArr(arr, 3);
 
-    return 0;
-}
+//     cout << "in main\n";
+//     for(int i=0; i<3; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int linearSearch(int arr[], int sz, int target) {
+//     for(int i=0; i<sz; i++) {
+//         if(arr[i] == target) {
+//             return i;  //FOUND
+//         }
+//     }
+//     return -1;  //NOT FOUND
+
+// }
+
+// int main() {
+//     int arr[] = {4, 2, 7, 8, 1, 2, 5};
+//     int sz = 7;
+//     int target = 8;
+
+//     cout << linearSearch(arr, sz, target) << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// void reverseArray(int arr[], int sz) {
+//     int start = 0, end = sz-1;
+
+//     while(start < end) {
+//         swap(arr[start], arr[end]);
+//         start++;
+//         end--;
+//     }
+// }
+
+// int main() {
+//     int arr[] = {4, 2, 7, 8, 1, 2, 5};
+//     int sz = 7;
+
+//     reverseArray(arr, sz);
+
+//     for(int i=0; i<sz; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+
+// }
