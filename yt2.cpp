@@ -14,14 +14,9 @@
 //     return ans;  // ans is binary form 
 // }
 
-// int main(){
+// int main(){ 
 
-//     int decNum = 50;
-
-//     for(int i=1; i<=10; i++){
-//         cout << decToBinary(i) << endl;
-//     }
-//    // cout << decToBinary(decNum) << endl;
+//    cout << decToBinary(42) << endl;
 //     return 0;
 // }
 
@@ -50,25 +45,25 @@
 //     return 0;
 // }
 
-# include <iostream>
-using namespace std;
+// # include <iostream>
+// using namespace std;
 
-int binToDec(int binNum) {
-    int ans = 0, pow = 1;
+// int binToDec(int binNum) {
+//     int ans = 0, pow = 1;
 
-    while(binNum > 0) {
-        int rem = binNum % 10;
-        binNum /= 10;
+//     while(binNum > 0) {
+//         int rem = binNum % 10;
+//         binNum /= 10;
 
-        ans += (rem * pow);
-        pow *= 2;
-    }
-    return ans;
-}
+//         ans += (rem * pow);
+//         pow *= 2;
+//     }
+//     return ans;
+// }
 
-int main(){
+// int main(){
 
-    cout << binToDec(101010) << endl;
+//     cout << binToDec(101010) << endl;
 
-    return 0;
-}
+//     return 0;
+// }

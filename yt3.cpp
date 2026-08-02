@@ -33,7 +33,7 @@
 // int x = 10;
 
 // int fun() {
-    // cout << x << endl;    // global scope
+//     cout << x << endl;    // global scope
 // }
 
 // int main(){

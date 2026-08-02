@@ -53,15 +53,15 @@
 //     return 0;
 // }
 
-
-// # include <iostream>
+// #include <iostream>
 // using namespace std;
 
-// int main(){
-//     double price;
-//     cout << "Enter the price : ";
-//     cin >> price;                      // input in c++
-//     cout <<"You entered price : " << price << endl;
+// int main() {
+//     int age;
+//     cout << "Enter your age : ";
+//     cin >> age;
+//     cout << "Your age is : ";
+//     cout << age << endl;
 //     return 0;
 // }
 
@@ -76,8 +76,8 @@
 //     cout << "Sum = " << (a + b) << endl;
 //     cout << "difference = " << (a - b) << endl;
 //     cout << "product = " << (a * b) << endl;
-//     cout << (5 / (double)2) << endl;
-//     cout << "modulo = " << (a % b) << endl;
+//     cout << "division = " <<(50/2) << endl;
+//     cout << "modulo = " << (50 % 2) << endl;
 //     return 0;
 // }
 
@@ -86,11 +86,11 @@
 // using namespace std;
 
 // int main(){
-// //     cout << (3<5) << endl;  // true->1
-// //     cout << (3>5) << endl;
-// //     cout << (3>=3) << endl;
-// //     cout << (3!=3) << endl;
-//        cout <<( (3<1) || (3>5) )<< endl;
+//     cout << (3<5) << endl;  // true->1
+//     cout << (3>5) << endl;
+//     cout << (3>=3) << endl;
+//     cout << (3!=3) << endl;
+//     cout <<( (3<1) || (3>5) )<< endl;
 //     return 0;
 // }
 
@@ -112,8 +112,8 @@
 // }
 
 
-//# include <iostream>
-//using namespace std;
+// # include <iostream>
+// using namespace std;
 
 // int main(){
 //     int a, b;
@@ -254,12 +254,12 @@
 // int main(){
 //     int n = 10;
 
-//     for(int i =1; i<=n; i = i+2){
+//     for(int i=1; i<=n; i+=2){
 //         cout << i << " ";
 //     }
 //     cout << endl;
 //     return 0;
-//}
+// }
 
 // # include <iostream>
 // using namespace std;
