@@ -90,7 +90,7 @@
 //     cout << (3>5) << endl;
 //     cout << (3>=3) << endl;
 //     cout << (3!=3) << endl;
-//     cout <<( (3<1) || (3>5) )<< endl;
+//     cout <<( (3<1) || (3>5) ) << endl;
 //     return 0;
 // }
 
@@ -229,7 +229,6 @@
 //     cout << (n >= 0 ? "positive" : "negative") << endl;
 //     return 0;
 // }
-
 
 // # include <iostream>
 // using namespace std;

@@ -37,34 +37,34 @@
 //     return 0;
 // }
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void swapMaxMin(int arr[], int sz) {
-    int maxIndex = 0, minIndex =0;
-    for(int i=0; i<sz; i++) {
-        if(arr[i] > arr[maxIndex]){
-            maxIndex = i;
-        }
-        if(arr[i] < arr[minIndex]) {
-            minIndex = i;
-        }
-    }
-    int temp = arr[maxIndex];
-    arr[maxIndex] = arr[minIndex];
-    arr[minIndex] = temp;
-}
+// void swapMaxMin(int arr[], int sz) {
+//     int maxIndex = 0, minIndex =0;
+//     for(int i=0; i<sz; i++) {
+//         if(arr[i] > arr[maxIndex]){
+//             maxIndex = i;
+//         }
+//         if(arr[i] < arr[minIndex]) {
+//             minIndex = i;
+//         }
+//     }
+//     int temp = arr[maxIndex];
+//     arr[maxIndex] = arr[minIndex];
+//     arr[minIndex] = temp;
+// }
 
-int main(){ 
-    int arr[] = {12, 45, 7, 89, 23};
-    int sz = sizeof(arr) / sizeof(arr[0]);
+// int main(){ 
+//     int arr[] = {12, 45, 7, 89, 23};
+//     int sz = sizeof(arr) / sizeof(arr[0]);
 
-    swapMaxMin(arr, sz);
+//     swapMaxMin(arr, sz);
 
-    cout << "Array after swapping max and min elements : \n";
-    for(int i=0; i<sz; i++){
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-    return 0;
-}
+//     cout << "Array after swapping max and min elements : \n";
+//     for(int i=0; i<sz; i++){
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }
