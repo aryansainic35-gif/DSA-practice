@@ -67,3 +67,52 @@
 
 //     return 0;
 // }
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// vector<int>majorityElements(int arr[], int n) {
+//     int ans1 = 0;
+//     int ans2 = 1;
+
+//     int freq1 = 0;
+//     int freq2 = 0;
+
+//     for(int i=0; i<n; i++) {
+//         if(arr[i] == ans1) {
+//             freq1++;
+//         }
+//         else if(arr[i] == ans2) {
+//             freq2++;
+//         }
+//         else if(freq1 == 0) {
+//             ans1 = arr[i];
+//             freq1 = 1;
+//         }
+//         else if(freq2 == 0) {
+//             ans2 = arr[i];
+//             freq2 = 1;
+//         }
+//         else {
+//             freq1--;
+//             freq2--;
+//         }
+//     }
+//     freq1 = 0;
+//     freq2 = 0;
+
+//     for(int i=0; i<n; i++) {
+//         if(arr[i] == ans1) {
+//             freq1++;
+//         }
+//         else(arr[i] == ans2) {
+//             freq2++;
+//         }
+//     }
+//     vector<int>result;
+
+//     if(freq1 > n/3) {
+//         result.push_back(ans1);
+//     }
+// }
