@@ -36,54 +36,114 @@
 // }
 
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+
+// int binarySearch(vector<int> arr, int tar) {
+//     int n = arr.size();
+//     int st = 0, end = n-1;   // Iterative
+
+//     while(st <= end) {
+//         //int mid = (st + end) / 2;
+//         int mid = st + (end-st)/2;
+
+//         if(tar > arr[mid]) {
+//             st = mid+1;
+//         } else if(tar < arr[mid]) {
+//             end = mid-1;
+//         } else {
+//             return mid;
+//         }
+//     }
+//     return -1;
+// }
+// int recBinarySearch(vector<int> arr, int tar, int st, int end) {
+//     if(st <= end) {
+//         int mid = st + (end-st)/2;   // Recursion
+
+//         if(tar > arr[mid]) {//2nd half
+//             return recBinarySearch(arr, tar, mid+1, end);
+//         } else if(tar < arr[mid]) {//1st half
+//             return recBinarySearch(arr, tar, st, mid-1);
+//         } else { // mid => ans
+//             return mid;
+//         }
+//     }
+//     return -1;
+// }
+// int main() {
+//     vector<int> arr1 = {-1, 0, 3, 4, 5, 9, 12};
+//     int tar1 = 40;
+
+//     //cout << binarySearch(arr1, tar1) << endl;
+
+//     vector<int> arr2 = {-1, 0, 3, 5, 9, 12};
+//     int tar2 = 0;
+
+//     cout << binarySearch(arr2, tar2) << endl;
+
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int binarySearch(vector<int> arr, int tar) {
+//     int n = arr.size();
+//     int st = 0, end = n-1;
+
+//     while(st <= end) {
+//         int mid = st + (end-st)/2;
+//         if(arr[mid] > tar) {
+//             end = mid-1;
+//         }
+//         else if(arr[mid] < tar) {
+//             st = mid+1;
+//         }
+//         else {
+//             return mid;
+//         }
+//     }
+//     return -1;
+// }
+// int main() {
+//     vector<int> arr = {1, 3, 5, 7, 9, 11};
+//     int tar = 7;
+
+//     cout << binarySearch(arr, tar) << endl;
+//     return 0;
+// }
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-
-int binarySearch(vector<int> arr, int tar) {
-    int n = arr.size();
-    int st = 0, end = n-1;   // Iterative
-
+int reBinarySearch(vector<int> arr, int tar, int st, int end) {
     while(st <= end) {
-        //int mid = (st + end) / 2;
         int mid = st + (end-st)/2;
-
-        if(tar > arr[mid]) {
-            st = mid+1;
-        } else if(tar < arr[mid]) {
-            end = mid-1;
-        } else {
-            return mid;
+        if(arr[mid] > tar) {
+            return reBinarySearch(arr, tar, st, mid-1);
         }
-    }
-    return -1;
-}
-int recBinarySearch(vector<int> arr, int tar, int st, int end) {
-    if(st <= end) {
-        int mid = st + (end-st)/2;   // Recursion
-
-        if(tar > arr[mid]) {//2nd half
-            return recBinarySearch(arr, tar, mid+1, end);
-        } else if(tar < arr[mid]) {//1st half
-            return recBinarySearch(arr, tar, st, mid-1);
-        } else { // mid => ans
+        else if(arr[mid] < tar) {
+            return reBinarySearch(arr, tar, mid+1, end);
+        }
+        else {
             return mid;
         }
     }
     return -1;
 }
 int main() {
-    vector<int> arr1 = {-1, 0, 3, 4, 5, 9, 12};
-    int tar1 = 40;
+    vector<int> arr = {1, 3, 5, 7, 9, 11};
+    int tar = 7;
+    int n = 6;
 
-    //cout << binarySearch(arr1, tar1) << endl;
-
-    vector<int> arr2 = {-1, 0, 3, 5, 9, 12};
-    int tar2 = 0;
-
-    cout << binarySearch(arr2, tar2) << endl;
-
-
+    cout << reBinarySearch(arr, tar, 0, n-1) << endl;
     return 0;
 }
