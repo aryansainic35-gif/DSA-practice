@@ -1,52 +1,100 @@
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages ) { //O(n)
+//     int students = 1, pages = 0;
+
+//     for(int i=0; i<n; i++) {
+//         if(arr[i] > maxAllowedPages) {
+//             return false;
+//         }
+//         if(pages + arr[i] <= maxAllowedPages) {
+//             pages += arr[i];
+//         } else {
+//             students++;
+//             pages = arr[i];
+//         }
+//     }
+//     return students > m ? false : true;
+// }
+// int allocateBooks(vector<int> &arr, int n, int m) {//O(logN * n)
+//     if(m > n) {//n => total no. of books and N =>range jis ke uppar bin.search apply horaha hai
+//         return -1;
+//     }
+
+//     int sum = 0; // min. max. range
+//     for(int i=0; i<n; i++) {//O(n)
+//         sum += arr[i];
+//     }
+
+//     int ans = -1;
+//     int st = 0, end = sum; //range of possible ans
+
+//     while(st <= end) {
+//         int mid = st + (end-st)/2;
+
+//         if(isValid(arr, n, m, mid)) {//left
+//             ans = mid;
+//             end = mid-1;
+//         } else {//right
+//             st = mid+1;
+//         }
+//     }
+//     return ans;
+// }
+// int main() {
+//     vector<int> arr = {15, 17, 20};
+//     int n = 4, m = 2;
+
+//     cout << allocateBooks(arr, n, m) << endl;
+//     return 0;
+// }
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages ) { //O(n)
-    int students = 1, pages = 0;
+
+bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages) {
+    int student = 1, pages = 0;
 
     for(int i=0; i<n; i++) {
         if(arr[i] > maxAllowedPages) {
             return false;
         }
-        if(pages + arr[i] <= maxAllowedPages) {
-            pages += arr[i];
-        } else {
-            students++;
-            pages = arr[i];
-        }
     }
-    return students > m ? false : true;
 }
-int allocateBooks(vector<int> &arr, int n, int m) {//O(logN * n)
-    if(m > n) {//n => total no. of books and N =>range jis ke uppar bin.search apply horaha hai
+int allocateBook(vector<int> &arr, int n, int m) {
+    if(m > n) {
         return -1;
     }
-
     int sum = 0;
-    for(int i=0; i<n; i++) {//O(n)
+    for(int i=0; i<n; i++) {
         sum += arr[i];
     }
 
     int ans = -1;
-    int st = 0, end = sum; //range of possible ans
+    int st = 0, end = sum;
 
     while(st <= end) {
         int mid = st + (end-st)/2;
 
-        if(isValid(arr, n, m, mid)) {//left
+        if(isValid(arr, n, m, mid)) {
             ans = mid;
             end = mid-1;
-        } else {//right
+        } else {
             st = mid+1;
         }
     }
     return ans;
 }
+
 int main() {
     vector<int> arr = {15, 17, 20};
     int n = 4, m = 2;
 
-    cout << allocateBooks(arr, n, m) << endl;
+    cout << allocateBook(arr, n, m) << endl;
     return 0;
 }
